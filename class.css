@@ -1,0 +1,119 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.sidebar{
+    float: left;
+    background-color: #ff712b;
+    width: 20%;
+    height: 100vh;
+    text-align: center;
+}
+.sidebar div{
+    text-align: left;
+    margin: 0 10% 0 10%;
+}
+
+.participants{
+    margin: 0 -1% 0 -1%;
+    line-height: 0;
+    padding: 8% 0 ;
+
+}
+.participants:hover{
+    margin: 0 -2% 0 -2%;
+    background-color: white;
+    color: #ff712b;
+    padding: 8% 0 8% 2%;
+}
+.add{
+    margin: auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+.addbtn{
+    margin-top: 3%;
+    width: 40%;
+    height: 70px;
+    font-size: 25px;
+}
+
+#assignForm, #scheduleForm{
+    /* position: absolute; */
+    margin: auto;
+    /* display: flex; */
+    justify-content: center;
+    width: 35%;    
+    padding: 50px 10px;
+    border: 1px solid black;
+    display: none;
+    margin-top: 40px;
+    border-radius: 20px;
+    box-shadow: 5px 10px #888888;
+
+}
+form{
+    text-align: center;
+    width: fit-content;
+}
+fieldset{
+    text-align: left;
+}
+
+.assignFile, .date, .time{
+    width: 350px;
+}
+
+textarea{
+    width: 400px;
+    height: 4rem;
+    font-size: 25px;
+    resize: none;
+}
+
+input{
+    width: 400px;
+    height: 40px;
+    font-size: 25px;
+}
+.datetime{
+    width: 400px;
+}
+button.create{
+    width: 49%;
+    height: 3rem;
+    font-size: 20px;
+}
+label{
+    text-align: left;
+}
+
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 40%;
+  }
+  
+  .tablink:hover {
+    background-color: #777;
+  }
+  
+  /* Style the tab content (and add height:100% for full page content) */
+  .tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 500%;
+  }
+  
+  /* #Home {background-color: red;} */
+  #News {background-color: green;}
+  #Contact {background-color: blue;}
+  #About {background-color: orange;}

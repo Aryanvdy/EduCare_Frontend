@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+    <link rel="stylesheet" href="class.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h1>AI</h1>
+        <h2>C33</h2>
+        <hr width="85%">
+        <div>
+            <h3>Participants</h3>
+            <p class="participants">Aayush Wadhwani</p>
+            <p class="participants">Aayush Wadhwani</p>
+            <p class="participants">Aayush Wadhwani</p>
+            <p class="participants">Aayush Wadhwani</p>
+        </div>
+    </div>
+
+    <div class="add">
+        <button class="addbtn" id="assign_btn" onclick="assignment()">Add Assignment</button>
+        <button class="addbtn" id="schedule_btn" onclick="schedules()">Add Schedules</button>
+    </div>
+
+    <div id="assignForm">
+        <form action="" method="post">
+            <input type="text" name="assignName" placeholder="Assignment Name"><br><br>
+            <textarea name="assignDesc" placeholder="Description"></textarea><br><br>
+            <fieldset>
+                <legend>Add Reference File</legend>
+                    <input type="file" name="assignFile" class="assignFile">
+            </fieldset><br>
+            <fieldset>
+                <legend>Due Date</legend>
+                    <input type="date" class="date"><br>
+            </fieldset><br><br>
+            <button type="button" name="cancel" class="create" onclick="cancel_form()">Cancel</button>
+            <button type="submit" name="create" class="create">Add</button>
+        </form>
+    </div>
+
+    <div id="scheduleForm">
+        <form action="" method="post">
+            <input type="text" name="assignName" placeholder="Description"><br><br>
+            <fieldset>
+                <legend>Date & Time</legend>
+                    <input type="date" class="date"><br><br>
+                    <input type="time" class="time">
+            </fieldset><br>
+            <!-- <input type="text" name="duedate" placeholder="Due Date"><br><br> -->
+            <textarea placeholder="Meeting Link"></textarea><br><br>
+            <button type="button" name="cancel" class="create" onclick="cancel_form()">Cancel</button>
+            <button type="submit" name="create" class="create">Add</button>
+        </form>
+    </div>
+
+    <!-- <button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+    <button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
+    
+    <div id="Home" class="tabcontent">
+    <h3>Home</h3>
+    <p>Home is where the heart is..</p>
+    </div>
+
+    <div id="News" class="tabcontent">
+    <h3>News</h3>
+    <p>Some news this fine day!</p>
+    </div> -->
+
+
+
+
+    <script>
+        function cancel_form(){
+            document.getElementById("scheduleForm").style.display ="none";  
+            document.getElementById("assignForm").style.display ="none";
+            document.getElementById("assign_btn").disabled = false;  
+            document.getElementById("schedule_btn").disabled = false;  
+        }
+        function assignment(){
+            document.getElementById("assignForm").style.display ="flex";
+            document.getElementById("assign_btn").disabled = true;  
+            document.getElementById("schedule_btn").disabled = true;  
+
+        }
+
+        function schedules(){
+            document.getElementById("scheduleForm").style.display ="flex";  
+            document.getElementById("assign_btn").disabled = true;  
+            document.getElementById("schedule_btn").disabled = true;  
+        }
+
+
+
+        function openPage(pageName, elmnt, color) {
+        // Hide all elements with class="tabcontent" by default */
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Remove the background color of all tablinks/buttons
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+        }
+
+        // Show the specific tab content
+        document.getElementById(pageName).style.display = "block";
+
+        // Add the specific color to the button used to open the tab content
+        elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+</html>
