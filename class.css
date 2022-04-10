@@ -1,6 +1,8 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: #111633;
+    overflow: hidden;
 }
 .sidebar{
     float: left;
@@ -31,6 +33,7 @@ body{
     width: 60%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 .addbtn{
     margin-top: 3%;
@@ -40,7 +43,11 @@ body{
 }
 
 #assignForm, #scheduleForm{
-    /* position: absolute; */
+    position: absolute;
+    /* top: 0; */
+    left: 0;
+    right: 0;
+    /* bottom: 0; */
     margin: auto;
     /* display: flex; */
     justify-content: center;
@@ -51,6 +58,7 @@ body{
     margin-top: 40px;
     border-radius: 20px;
     box-shadow: 5px 10px #888888;
+    background-color: white;
 
 }
 form{
@@ -90,7 +98,7 @@ label{
 }
 
 .tablink {
-    background-color: #555;
+    background-color: #ff712b;
     color: white;
     float: left;
     border: none;
@@ -99,21 +107,54 @@ label{
     padding: 14px 16px;
     font-size: 17px;
     width: 40%;
+    font-size: 20px;
   }
   
   .tablink:hover {
-    background-color: #777;
+    background-color: #ff722bec;
   }
   
   /* Style the tab content (and add height:100% for full page content) */
   .tabcontent {
-    color: white;
+    color: black;
     display: none;
-    padding: 100px 20px;
-    height: 500%;
+    padding: 30px 20px;
+    height: 80vh;
+    /* width: 80%; */
+    right: 0;
+    margin-left: 20%;
+    background-color: white;
+    /* overflow-y: auto */
   }
   
-  /* #Home {background-color: red;} */
-  #News {background-color: green;}
-  #Contact {background-color: blue;}
-  #About {background-color: orange;}
+  .assigncard{
+      /* border: 2px solid black; */
+      box-shadow: 2px 4px #88888858;
+      border-radius: 5px;
+      padding: 1.3rem;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: space-between;
+
+  }
+
+  a, a:hover{
+      text-decoration: none;
+      color: black;
+  }
+
+  .assigncard{
+      background-color: #11163364;
+  }
+  .Title{
+      margin: 1rem ;
+      font-size: 1.5rem;
+      width: 200px;
+  }
+
+  .DueDate, .turnedIn{
+      /* position: absolute; */
+      /* right: 3rem; */
+      margin: 1rem;
+      font-size: 1.2rem;
+  }

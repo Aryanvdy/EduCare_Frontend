@@ -58,18 +58,41 @@
         </form>
     </div>
 
-    <!-- <button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
-    <button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
+    <button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Assignments</button>
+    <button class="tablink" onclick="openPage('News', this, 'green')">Schedule</button>
     
     <div id="Home" class="tabcontent">
-    <h3>Home</h3>
-    <p>Home is where the heart is..</p>
+        <a href="http://">
+            <div class="assigncard">
+                <span class="Title">PEAS Properties</span>
+                <span class="turnedIn">7 / 18</span>
+                <span class="DueDate">10 April</span>
+            </div>
+        </a>
+
+        <a href="http://">
+            <div class="assigncard">
+                <span class="Title">AI Agents</span>
+                <span class="turnedIn">10 / 18</span>
+                <span class="DueDate">16 April</span>
+            </div>
+        </a>
+
+        <a href="http://">
+            <div class="assigncard">
+                <span class="Title">BFS</span>
+                <span class="turnedIn">3 / 18</span>
+                <span class="DueDate">19 April</span>
+            </div>
+        </a>
+
+
     </div>
 
     <div id="News" class="tabcontent">
     <h3>News</h3>
     <p>Some news this fine day!</p>
-    </div> -->
+    </div>
 
 
 
@@ -114,7 +137,9 @@
         document.getElementById(pageName).style.display = "block";
 
         // Add the specific color to the button used to open the tab content
-        elmnt.style.backgroundColor = color;
+        elmnt.style.borderTop = "5px solid #ff712b" ;
+        elmnt.style.backgroundColor = "white"
+        elmnt.style.color="black"
         }
 
         // Get the element with id="defaultOpen" and click on it
