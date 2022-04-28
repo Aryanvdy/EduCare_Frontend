@@ -1,92 +1,96 @@
-body{
-    background-color: #111633;
-    /* background-color: #111633; */
-    /* color: white; */
+body {
+  background-color: #111633;
+  color: white;
+  /* background-color: #111633; */
+  /* color: white; */
 }
 
 .cards {
-    display: flex;
-    justify-content: left;
-    flex-wrap: wrap;
-    /* background-color: #f5f5f5; */
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  /* background-color: #f5f5f5; */
 }
-.bg{
-    background-color: #f5f5f5;
+.bg {
+  background-color: #f5f5f5;
 }
-.card{
-    margin-right: 2px;
-    margin-top: 3rem;
-    width: 24%;
-    padding: 25px 25px;
-}
-
-.batch{
-    /* float: right; */
-    /* position: absolute; */
-    /* right: 30px; */
-    margin-bottom: 20px;
-}
-.subject{
-    /* position: absolute; */
-    /* left: 30px; */
-    margin-top: 20px;
-}
-h1, h3{
-    display: inline;
-    margin: auto;
+.card {
+  margin-right: 2px;
+  margin-top: 3rem;
+  width: 24%;
+  padding: 25px 25px;
 }
 
-a, a:hover{
-    text-decoration: none;
-    color: black;
+.batch {
+  /* float: right; */
+  /* position: absolute; */
+  /* right: 30px; */
+  margin-bottom: 20px;
 }
-a{
-    transition: transform .5s;
+.subject {
+  /* position: absolute; */
+  /* left: 30px; */
+  margin-top: 20px;
 }
-a:hover{
-    /* background-color: #ff712b; */
-    -ms-transform: scale(1.2); /* IE 9 */
-    -webkit-transform: scale(1.2); /* Safari 3-8 */
-    transform: scale(1.1); 
-    z-index: 1;
-}
-.create{
-    display: inline;
-}
-.formPart{
-    width: 21%;
+h1,
+h3 {
+  display: inline;
+  margin: auto;
 }
 
-.createClass{
-    height: 4rem;
-    width: 12rem;
-    font-size: 1.3rem;
-    border-radius: 2rem;
-    border: 3px solid #ff712b;
-    color: #ff712b;
-    font-weight: 500;
-    background-color: transparent;
+a,
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+a {
+  transition: transform 0.5s;
+}
+a:hover {
+  /* background-color: #ff712b; */
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.1);
+  z-index: 1;
+}
+.create {
+  display: inline;
+}
+.formPart {
+  width: 21%;
 }
 
-.createClass{
-    border: 3px #ff712b;
-    color: white;
-    background-color: #ff712b;
-    transition: all .8s ease;
+.createClass {
+  height: 4rem;
+  width: 12rem;
+  font-size: 1.3rem;
+  border-radius: 2rem;
+  border: 3px solid #ff712b;
+  color: #ff712b;
+  font-weight: 500;
+  background-color: transparent;
 }
 
-
-input, select{
-    width: 20rem;
-    height: 3rem;
-    padding: 0.5rem;
-    font-size: 1.2rem;
+.createClass {
+  border: 3px #ff712b;
+  color: white;
+  background-color: #ff712b;
+  transition: all 0.8s ease;
 }
 
-label, select{
-    font-size: 1.3rem;
+input,
+select {
+  width: 20rem;
+  height: 3rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
 }
 
-.buton{
-    text-align: center;
+label,
+select {
+  font-size: 1.3rem;
+}
+
+.buton {
+  text-align: center;
 }
