@@ -20,43 +20,56 @@
   </head>
   <body>
     <div class="create row">
-      <form action="" method="post">
+      <form class="class-add">
         <div class="container">
           <div class="row">
             <div class="col">
-              <label for="batchName">Batch Name</label><br />
-              <input type="text" name="batchName" id="" placeholder="" />
+              <label for="class-name">Class Name</label><br />
+              <input type="text" name="class-name" id="class-name" required />
             </div>
-            <!-- <div class="col">
-                    <label for="description">Description</label><br>
-                    <input type="text" name="description" id="">
-                  </div> -->
             <div class="col">
-              <label for="csv">Student's Email CSV File</label><br />
-              <input type="file" name="csv" id="" />
+              <label for="csv">Student's Id's CSV File</label><br />
+              <input
+                type="file"
+                name="students-csv"
+                id="students-csv"
+                required
+              />
             </div>
             <div class="col buton">
-              <button type="submit" class="createClass">Create Batch</button>
+              <button type="submit" class="createClass">Create Class</button>
             </div>
+          </div>
+          <div>
+            <h5 id="class-error" class="text-danger"></h5>
           </div>
         </div>
       </form>
       <br /><br />
 
-      <form action="" method="post">
+      <form class="subject-add">
         <div class="container">
           <div class="row">
             <div class="col">
-              <label for="className">Class Name</label><br />
-              <input type="text" name="className" id="" placeholder="" />
+              <label for="subject-name">Subject Name</label><br />
+              <input
+                type="text"
+                name="subject-name"
+                id="subject-name"
+                placeholder="MPR"
+                required
+              />
             </div>
             <div class="col">
-              <label for="classList">Select Batch</label><br />
-              <select name="classList" id="classList"></select>
+              <label for="class-selected">Select Class</label><br />
+              <select name="class-selected" id="class-selected"></select>
             </div>
             <div class="col buton">
-              <button type="submit" class="createClass">Create Class</button>
+              <button type="submit" class="createClass">Create Subject</button>
             </div>
+          </div>
+          <div>
+            <h5 id="subject-error" class="text-danger"></h5>
           </div>
         </div>
       </form>
