@@ -2,9 +2,10 @@ body{
     margin: 0;
     padding: 0;
     background-color: #111633;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .sidebar{
+    position: fixed;
     float: left;
     background-color: #ff712b;
     width: 20%;
@@ -28,6 +29,12 @@ body{
     color: #ff712b;
     padding: 8% 0 8% 2%;
 }
+.class_cont{
+    position: relative;
+    width: 80%;
+    float: right;
+}
+
 .add{
     margin: auto;
     width: 60%;
@@ -44,14 +51,11 @@ body{
 
 #assignForm, #scheduleForm{
     position: absolute;
-    /* top: 0; */
     left: 0;
     right: 0;
-    /* bottom: 0; */
     margin: auto;
-    /* display: flex; */
     justify-content: center;
-    width: 35%;    
+    width: 45%;    
     padding: 50px 10px;
     border: 1px solid black;
     display: none;
@@ -106,7 +110,7 @@ label{
     cursor: pointer;
     padding: 14px 16px;
     font-size: 17px;
-    width: 40%;
+    width: 50%;
     font-size: 20px;
   }
   
@@ -119,12 +123,10 @@ label{
     color: black;
     display: none;
     padding: 30px 20px;
-    height: 80vh;
-    /* width: 80%; */
+    /* height: 150vh; */
     right: 0;
-    margin-left: 20%;
     background-color: white;
-    /* overflow-y: auto */
+    overflow-y: auto;
   }
   
   .assigncard{
