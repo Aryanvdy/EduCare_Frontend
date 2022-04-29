@@ -88,8 +88,7 @@ classAdd.addEventListener("submit", async (e) => {
   ) {
     location.href = "./dashboard.html";
   } else {
-    document.querySelector("#class-error").innerHTML =
-      "There was an error. Try again";
+    document.querySelector("#class-error").innerHTML = classDetails.message;
   }
 });
 
