@@ -10,6 +10,8 @@
 
   </head>
   <body>
+    <div id="overlayy" onclick="cancel_form()"></div>
+
     <div class="sidebar">
       <h1 class="class-l">AI</h1>
       <h2 class="subject-l">C33</h2>
@@ -27,9 +29,10 @@
         Add Schedules
       </button>
     </div>
-
     <div id="assignForm">
+      
       <form id="assignment-submit">
+        <h2>Add Assignment</h2><br>
         <input
           type="text"
           name="name"
@@ -43,15 +46,17 @@
         ></textarea
         ><br /><br />
         <fieldset>
+          <legend>Due Date</legend>
+          <input type="date" class="date" name="dueDate" id="dueDate" /><br />
+        </fieldset>
+        <br />
+        <fieldset>
           <legend>Add Reference File</legend>
           <input type="file" name="file" id="file" class="assignFile iddd" />
         </fieldset>
         <br />
-        <fieldset>
-          <legend>Due Date</legend>
-          <input type="date" class="date" name="dueDate" id="dueDate" /><br />
-        </fieldset>
-        <br /><br />
+        
+        
         <button
           type="button"
           name="cancel"
@@ -66,6 +71,8 @@
 
     <div id="scheduleForm">
       <form id="schedule-form-submit">
+        <h2>Add Schedule</h2><br>
+
         <input
           type="text"
           name="schedule-description"
@@ -365,17 +372,21 @@
       function cancel_form() {
         document.getElementById("scheduleForm").style.display = "none";
         document.getElementById("assignForm").style.display = "none";
+        document.getElementById("overlayy").style.display = "none";
         document.getElementById("assign_btn").disabled = false;
         document.getElementById("schedule_btn").disabled = false;
       }
       function assignment() {
         document.getElementById("assignForm").style.display = "flex";
+        document.getElementById("overlayy").style.display = "block";
         document.getElementById("assign_btn").disabled = true;
         document.getElementById("schedule_btn").disabled = true;
       }
 
       function schedules() {
         document.getElementById("scheduleForm").style.display = "flex";
+        document.getElementById("overlayy").style.display = "block";
+
         document.getElementById("assign_btn").disabled = true;
         document.getElementById("schedule_btn").disabled = true;
       }

@@ -48,22 +48,32 @@ body{
     height: 70px;
     font-size: 25px;
 }
-
+#overlayy{
+    background-color: rgba(0, 0, 0, 0.308);
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 4;
+    display: none;
+}
 #assignForm, #scheduleForm{
     position: absolute;
     left: 0;
     right: 0;
     margin: auto;
     justify-content: center;
-    width: 45%;    
-    padding: 50px 10px;
+    width: 35%;    
+    padding: 20px 10px 50px 10px;
     border: 1px solid black;
     display: none;
-    margin-top: 40px;
+    margin-top: 0px;
     border-radius: 20px;
     box-shadow: 5px 10px #888888;
     background-color: white;
-
+    z-index: 6;
+    font-size: 0.9rem;
 }
 form{
     text-align: center;
@@ -74,23 +84,25 @@ fieldset{
 }
 
 .assignFile, .date, .time{
-    width: 350px;
+    width: 300px;
+    font-size: 1.2rem;
 }
 
 textarea{
-    width: 400px;
+    width: 300px;
     height: 4rem;
-    font-size: 25px;
+    font-size: 18px;
     resize: none;
 }
 
 input{
-    width: 400px;
+    width: 300px;
     height: 40px;
-    font-size: 25px;
+    font-size: 18px;
 }
 .datetime{
-    width: 400px;
+    width: 300px;
+    font-size: 18px;
 }
 button.create{
     width: 49%;
@@ -99,6 +111,7 @@ button.create{
 }
 label{
     text-align: left;
+    font-size: 18px;
 }
 
 .tablink {
