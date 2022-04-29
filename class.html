@@ -63,20 +63,40 @@
     </div>
 
     <div id="scheduleForm">
-      <form action="" method="post">
+      <form id="schedule-form-submit">
         <input
           type="text"
-          name="assignName"
+          name="schedule-description"
+          id="schedule-description"
           placeholder="Description"
         /><br /><br />
         <fieldset>
-          <legend>Date & Time</legend>
-          <input type="date" class="date" /><br /><br />
-          <input type="time" class="time" />
+          <legend>Start Time</legend>
+          <input
+            type="datetime-local"
+            id="schedule-start-date"
+            name="schedule-start-date"
+            required
+          />
+        </fieldset>
+        <br />
+        <fieldset>
+          <legend>End Time</legend>
+          <input
+            type="datetime-local"
+            id="schedule-end-date"
+            name="schedule-end-date"
+            required
+          />
         </fieldset>
         <br />
         <!-- <input type="text" name="duedate" placeholder="Due Date"><br><br> -->
-        <textarea placeholder="Meeting Link"></textarea><br /><br />
+        <textarea
+          placeholder="Meeting Link"
+          name="schedule-link"
+          id="schedule-link"
+        ></textarea
+        ><br /><br />
         <button
           type="button"
           name="cancel"
@@ -86,6 +106,7 @@
           Cancel
         </button>
         <button type="submit" name="create" class="create">Add</button>
+        <div><h5 class="schedule-error text-danger"></h5></div>
       </form>
     </div>
 

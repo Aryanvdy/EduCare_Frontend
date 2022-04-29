@@ -69,3 +69,51 @@ form.addEventListener("submit", async (e) => {
 });
 
 getSubjectById(id);
+
+const scheduleAdd = document.querySelector("#schedule-form-submit");
+scheduleAdd.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  console.log(scheduleAdd["schedule-description"].value);
+  console.log(scheduleAdd["schedule-start-date"].value);
+  console.log(scheduleAdd["schedule-end-date"].value);
+  console.log(scheduleAdd["schedule-link"].value);
+
+  const description = scheduleAdd["schedule-description"].value;
+  const startTime = scheduleAdd["schedule-start-date"].value;
+  const endTime = scheduleAdd["schedule-end-date"].value;
+  const link = scheduleAdd["schedule-link"].value;
+
+  console.log({
+    description,
+    startTime,
+    endTime,
+    link,
+    subject: id,
+  });
+  const addSchedule = await fetch(
+    "https://educare-backend-api.herokuapp.com/api/v1/schedule",
+    {
+      method: "POST",
+      headers: {
+        authorization: token,
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        description,
+        startTime,
+        endTime,
+        link,
+        subject: id,
+      }),
+    }
+  );
+
+  const response = await addSchedule.json();
+  if (response.status.message == "success") {
+    location.href = `./class.html?id=${id}`;
+  } else {
+    document.querySelector(".schedule-error").innerHTML = response.message;
+  }
+  console.log(response);
+});
